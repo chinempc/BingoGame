@@ -1,5 +1,16 @@
 #include "Bingo_class.h"
 
+//Constructors ~Nick(Artsy03)
+Bingo_class::Bingo_class()
+{
+    cout << "WELCOME TO THE BINGO GAME!!\n";
+}
+
+Bingo_class::Bingo_class(string inputfile)
+{
+    cout << "WELCOME TO THE BINGO GAME!!\n;
+    Bingo_class::read(inputfile);
+}
 
 
 
