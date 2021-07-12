@@ -8,7 +8,7 @@ Bingo_class::Bingo_class()
 
 Bingo_class::Bingo_class(string inputfile)
 {
-    cout << "WELCOME TO THE BINGO GAME!!\n;
+    cout << "WELCOME TO THE BINGO GAME!!\n";
     Bingo_class::read(inputfile);
 }
 
