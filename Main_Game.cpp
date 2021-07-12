@@ -15,11 +15,13 @@ private:
 public:
 	int board[5][5] = { {0,0,0,0,0} ,{0,0,0,0,0}, {0,0,0,0,0} ,{0,0,0,0,0} ,{0,0,0,0,0} };
 	void SetBoard(int board[5][5]);//Set the value in the Player Board
-	void ReadBoard();
-	bool GetWin() { return Win; }
+	void ReadBoard();// This helps to looks at the players element progress within the board
+	bool GetWin() { return Win; }// gets the win for the program 
 	void Highlight(int x);//recieve number and 'highlight'
 	void FindWin();
 };
+
+
 void Player::ReadBoard()
 {
 	for (int row = 0; row < 5; row++)
@@ -31,7 +33,7 @@ void Player::ReadBoard()
 		cout << endl;
 	}
 }
-
+// SetBoard 
 void Player::SetBoard(int B[5][5])
 {
 	for(int row = 0; row < 5;row++)
@@ -279,7 +281,7 @@ int Game_Manager::PlayGame()
 	cout << "Player have bingo: ";
 	return LastVC;
 }
-void Test1()
+void Test1() // plays the game in test 1
 {
 	int FNum = 0;
 	Game_Manager GM;
@@ -288,7 +290,7 @@ void Test1()
 	cout << FNum<<endl;
 	cout << "success"<<endl;
 }
-void Test2()
+void Test2() // plays the game in test 2
 {
 	int FNum = 0;
 	Game_Manager GM;
@@ -297,8 +299,7 @@ void Test2()
 	cout << FNum << endl;
 	cout << "success"<<endl;
 }
-void Test3()
-{
+void Test3() // plays the game in test 3
 	int FNum = 0;
 	Game_Manager GM;
 	FNum = GM.PlayGame();
