@@ -91,7 +91,7 @@ void Player::FindWin()
 				break;
 		}
 	}
-	if (board[0][0] == 0 && board[4][0] == 0 && board[0][4] == 0 && board[4][4] == 0)//else all corners are marked bingo
+	if (board[0][0] = 0 && board[4][0] == 0 && board[0][4] == 0 && board[4][4] == 0)//else all corners are marked bingo
 	{
 		Win = true;
 	}
