@@ -12,8 +12,8 @@ Bingo_class::Bingo_class(string inputfile)
     Bingo_class::read(inputfile);
 }
 
-
-void Bingo_class::read(string inputfile)
+// read function 
+void Bingo_class::read(string inputfile) // This takes  
 {
     int_list.clear();
     data.clear();
@@ -49,7 +49,7 @@ void Bingo_class::read(string inputfile)
         }
         data.push_back(row);
     }
-
+    //playgame funtion 
     int x = playGame();
     if (x != -1) {
         cout << "Test: " << inputfile << " = " << x << endl;;
@@ -58,6 +58,8 @@ void Bingo_class::read(string inputfile)
         cout << "error" << endl;
     }
 }
+
+// Write Funtion
 void Bingo_class::write(string outputfile) //Write out Board in txt file format
 {
     ofstream outdata; // outdata is like cin
@@ -118,6 +120,9 @@ void Bingo_class::write(string outputfile) //Write out Board in txt file format
     outdata.close();
 }
 
+
+//play game Funtion
+//The playGame funtion plays the game and give it the logical funtion on how the bingo Board game can be run. Also highlights the prgress and wins of the condition. 
 int Bingo_class::playGame() //both highlight and win condition in playGame() function
 {
     for (int i = 0; i < 75;i++) {
@@ -131,26 +136,26 @@ int Bingo_class::playGame() //both highlight and win condition in playGame() fun
             }
             
         }
-        //check 4 coner case
+        //checks 4 coner case  within the array
         if (data[0][0]==data[0][4] && data[4][0]==data[4][4] && data[0][0] == data[4][4]) {
             cout << "corner";
             return int_list[i];
         }
 
-        //check columns
+        //checks columns  within the array
         for (int j = 0; j < 5; j++) {
             if (data[0][j]== data[1][j] && data[2][j] == data[3][j] && data[4][j]==data[0][j] && data[4][j]==data[2][j]) {
                 
                 return int_list[i];
             }
         }
-        //check rows
+        //checks rows  within the array
         for (int j = 0; j < 5; j++) {
             if (data[j][0] == data[j][1] && data[j][2] == data[j][3] && data[j][4] == data[j][0] && data[j][4] == data[j][2]) {
                 return int_list[i];
             }
         }
-        //check diagnols
+        //checks the diagnols within the array
         if (data[0][0]==data[1][1] &&data[2][2]==data[3][3]&&data[4][4] ==data[1][1] && data[4][4]==data[2][2]) {
 
             return int_list[i];
@@ -162,7 +167,8 @@ int Bingo_class::playGame() //both highlight and win condition in playGame() fun
     return -1;
 }
 
-// Shuffle 
+
+// Shuffle the game on random 
 vector<int> shuffle(vector<int> arr) {
     int temp;
     int rand_selction;
