@@ -1,6 +1,11 @@
 # The Bingo game
 This is a Bingo game created in c++ by 4 group memebers.
 
+C++ 
+
+Bingo: Zavion, Chukwuebuka Chinemere, Emmanuel Isidahomen, Nicholas Waugh
+
+
 https://www.youtube.com/watch?v=dJ4YDTqmhJk&ab_channel=TripleSGames
 
 
